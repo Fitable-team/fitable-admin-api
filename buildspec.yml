@@ -1,0 +1,12 @@
+version: 1.0
+phases:
+  pre_build:
+    commands:
+      - mvn clean -pl api
+  build:
+    commands:
+      - mvn package -pl api -am
+artifacts:
+  files:
+    - api/target/*.jar
+  name: fitable-api
