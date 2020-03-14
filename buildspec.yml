@@ -5,7 +5,7 @@ phases:
       - mvn clean -pl api
   build:
     commands:
-      - mvn package -pl api -am
+      - mvn package -pl api -am -DskipTests=true
 artifacts:
   files:
     - api/target/*.jar
